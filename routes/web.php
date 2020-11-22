@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/' , 'StudentController@dashboard');
 
 Auth::routes();
 
@@ -34,7 +32,41 @@ Route::get('/register-student', 'Auth\RegisterController@registerStudent');
 Route::get('/register-teacher', 'Auth\RegisterController@registerTeacher');
 Route::get('/register-staff', 'Auth\RegisterController@registerStaff');
 
-//Route Untuk Admin, Student, Teacher, Staff TU, jika register dan login maka akan ke halaman ini 
-Route::group(['middleware' => ['auth', 'verified']], function () {
-    Route::get('/dashboard', 'User\UserController@index')->name('dashboard.users');
+//Route Untuk Admin, Student jika register dan login maka akan ke halaman ini
+Route::group(['middleware' => ['role:admin']], function () {
+	Route::get('/admin' , 'AdminController@dashboard');
+
+	//ADmin
+	Route::get('/admin/dashboard' , 'AdminController@dashboard');
+    Route::get('/admin/list-students' , 'AdminController@listStudents');
+    Route::get('/admin/list-class' , 'AdminController@listClass');
+
+    Route::get('/admin/add-class' , 'AdminController@addClass');
+    Route::get('/admin/add-student' , 'AdminController@addStudent');
+
+    Route::get('/admin/list-tabungan'  , 'AdminController@listTabungan');
+    Route::get('/admin/list-tabungan/detail' , 'AdminController@detailTabungan');
+    Route::get('/admin/list-tabungan/detail/siswa' , 'AdminController@detailTabunganSiswa');
+
+    //Untuk Save
+    //ini untuk bagian input data kelas dan siswa
+    Route::post('/admin/add-class' , 'AdminController@SaveAddClass');
+    Route::post('/admin/add-student' , 'AdminController@SaveAddStudent');
+    
+    Route::get('/admin/list-students' , 'AdminController@list-students');    
+    
+    
 });
+
+//student
+Route::group(['middleware' => ['role:student']], function () {
+	Route::get('/student' , 'StudentController@dashboard');
+    Route::get('/student/list-tabungan' , 'StudentController@listTabungan');
+   
+});
+
+
+
+
+Route::get('table'  , 'AdminController@table');
+Route::get('form' , 'AdminController@form');

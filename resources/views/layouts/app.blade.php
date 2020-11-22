@@ -54,8 +54,6 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ url('register-student') }}">Siswa</a>
-                                <a class="dropdown-item" href="{{ url('register-teacher') }}">Guru</a>
-                                <a class="dropdown-item" href="{{ url('register-staff') }}">Staff TU</a>
                             </div>
                         </li>
                         @endif

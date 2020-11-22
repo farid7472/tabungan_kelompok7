@@ -24,45 +24,16 @@
 
                     {{ __('You are logged in!') }}
                     <br><br>
+                    <tr>
+                          <td> Nama  : {{ Auth()->user()->usr_name }} </td> 
+                          <br>
+                          <td> Roles : Siswa </td> 
+                         </tr>
+                    <br><br>
                     Example Tampilan Untuk Siswa
                 </div>
             </div>
-            @elseif(Auth()->user()->hasRole('teacher'))
-
-            <div class="card">
-                <div class="card-header" style="background: grey">{{ __('Dashboard Guru') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                    <br><br>
-                    Example Tampilan Untuk Guru
-                </div>
-            </div>
-
-            @elseif(Auth()->user()->hasRole('staff'))
-
-            <div class="card">
-                <div class="card-header" style="background: blue">{{ __('Dashboard Staff') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                    <br><br>
-                    Example Tampilan Untuk Staff
-                </div>
-            </div>
-
+         
             @else
 
             <div class="card">
@@ -76,6 +47,13 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                     <br><br>
+                           <tr>
+                        		 <td> Nama  :  {{ Auth()->user()->usr_name }}</td> 
+                        		 <br>
+                        		 <td> Roles : Admin </td> 
+                  		  </tr>
                 </div>
             </div>
 
