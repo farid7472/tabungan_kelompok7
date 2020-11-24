@@ -32,7 +32,7 @@ Route::get('/register-student', 'Auth\RegisterController@registerStudent');
 Route::get('/register-teacher', 'Auth\RegisterController@registerTeacher');
 Route::get('/register-staff', 'Auth\RegisterController@registerStaff');
 
-//Route Untuk Admin, Student jika register dan login maka akan ke halaman ini
+//Route Untuk Student jika register dan login maka akan ke halaman ini
 Route::group(['middleware' => ['role:admin']], function () {
 	Route::get('/admin' , 'AdminController@dashboard');
 
