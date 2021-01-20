@@ -17,54 +17,37 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="{{URL::to('/student/list-class')}}">
+                        <i class="la la-edit"></i>
+                        <span> Data Kelas </span>
+                    </a>
+                    </li>
+
                 
                 <li>
-                    <a href="{{URL::to('/admin/list-teacher')}}">
-                        <i class="la la-gear"></i>
-                        <span> Data Walikelas </span>
+                    <a href="{{URL::to('/student/list-tabungan')}}">
+                        <i class="la la-edit"></i>
+                        <span> Saldo Rekening Tabungan </span>
                     </a>
                 </li>
 
                 
                 <li>
-                    <a href="{{URL::to('/admin/list-student')}}">
-                        <i class="la la-gear"></i>
-                        <span> Data Siswa </span>
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="{{URL::to('/admin/list-class')}}">
-                        <i class="la la-gear"></i>
-                        <span> Daftar Kelas </span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{{URL::to('/admin/add-student')}}">
-                        <i class="la la-user-plus"></i>
-                        <span> Tabah Siswa </span>
-                    </a>
-                </li>
-
-
-
-                <li>
-                    <a href="{{URL::to('/admin/add-class')}}">
+                    <a href="{{URL::to('/student/list-rekening-tabungan')}}">
                         <i class="la la-edit"></i>
-                        <span> Tambah Kelas </span>
+                        <span> Rekening Tabungan </span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{URL::to('/admin/list-tabungan')}}">
+                    <a href="{{URL::to('/student/list-pemakaian-tabungan')}}">
                         <i class="la la-edit"></i>
-                        <span> Tabungan </span>
+                        <span> Pemakaian Rekening Tabungan </span>
                     </a>
                 </li>
 
-				<li>
+                <li>
 					 <a href="{{ route('logout') }}" class="dropdown-item notify-item" 
                			 onclick="event.preventDefault();
                			 document.getElementById('logout-form').submit();">
@@ -72,10 +55,10 @@
                     		<span>Logout</span>
                		 </a>
 
-                		 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                		<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 		    @csrf
                 		</form>
-				</li>                
+				</li>       
 
             </ul>
 

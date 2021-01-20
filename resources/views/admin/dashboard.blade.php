@@ -1,7 +1,7 @@
 @extends('layouts.admin-master')
 
 @section('judul')
-    Admin
+    Staff TU
 @endsection
 
 @section('content')

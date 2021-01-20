@@ -37,8 +37,20 @@ class UserSeeder extends Seeder
             'usr_is_active' => true,
         ]);
 
-        $siswa->assignRole('student');
+        // $walikelas->assignRole('walikelas');
 
-       
+         
+        // $walikelas = User::create([
+        //     'usr_name' => 'walikelas',
+        //     'usr_email' => 'walikelas@gmail.com',
+        //     'usr_phone' => '08213456789',
+        //     'usr_password' => Hash::make('walikelas123'),
+        //     'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        //     'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
+        //     'usr_is_active' => true,
+        // ]);
+
+        // $walikeas->assignRole('walikelas');
+   
     }
 }

@@ -32,6 +32,18 @@ Route::get('/register-student', 'Auth\RegisterController@registerStudent');
 Route::get('/register-teacher', 'Auth\RegisterController@registerTeacher');
 Route::get('/register-staff', 'Auth\RegisterController@registerStaff');
 
+//Login 
+
+Route::get('/account/profile/Student', 'Auth\LoginController@LoginStudent');
+Route::get('/account/profile/Teacher', 'Auth\LoginController@LoginTeacher');
+Route::get('/account/profile/Staff', 'Auth\LoginController@LoginStaff');
+
+//Edit profile
+
+Route::get('/account/profile/Student/edit', 'Auth\EditController@EditStudent');
+Route::get('/account/profile/Teacher/edit', 'Auth\EditController@EditTeacher');
+Route::get('/account/profile/Staff/edit', 'Auth\EditController@EditStaff');
+
 //Route Untuk Student jika register dan login maka akan ke halaman ini
 Route::group(['middleware' => ['role:admin']], function () {
 	Route::get('/admin' , 'AdminController@dashboard');
@@ -62,7 +74,7 @@ Route::group(['middleware' => ['role:admin']], function () {
 Route::group(['middleware' => ['role:student']], function () {
 	Route::get('/student' , 'StudentController@dashboard');
     Route::get('/student/list-tabungan' , 'StudentController@listTabungan');
-   
+    
 });
 
 

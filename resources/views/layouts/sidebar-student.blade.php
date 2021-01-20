@@ -21,7 +21,22 @@
                 <li>
                     <a href="{{URL::to('/student/list-tabungan')}}">
                         <i class="la la-edit"></i>
-                        <span> Tabungan </span>
+                        <span> Saldo Rekening Tabungan </span>
+                    </a>
+                </li>
+
+                
+                <li>
+                    <a href="{{URL::to('/student/list-tabungan')}}">
+                        <i class="la la-edit"></i>
+                        <span> Rekening Tabungan </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{URL::to('/student/list-tabungan')}}">
+                        <i class="la la-edit"></i>
+                        <span> Pemakaian Rekening Tabungan </span>
                     </a>
                 </li>
 
