@@ -15,7 +15,7 @@
 @include ('layouts.notification')
 
 
-@include('layouts.sidebar-admin')
+@include('layouts.sidebar-walikelas')
 
 <!-- ============================================================== -->
     <!-- Start Page Content here -->

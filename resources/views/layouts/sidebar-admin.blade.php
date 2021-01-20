@@ -21,7 +21,7 @@
                 <li>
                     <a href="{{URL::to('/admin/list-teacher')}}">
                         <i class="la la-gear"></i>
-                        <span> Data Walikelas </span>
+                        <span> Kelola Walikelas </span>
                     </a>
                 </li>
 
@@ -29,7 +29,7 @@
                 <li>
                     <a href="{{URL::to('/admin/list-student')}}">
                         <i class="la la-gear"></i>
-                        <span> Data Siswa </span>
+                        <span> Kelola Siswa </span>
                     </a>
                 </li>
 
@@ -37,14 +37,14 @@
                 <li>
                     <a href="{{URL::to('/admin/list-class')}}">
                         <i class="la la-gear"></i>
-                        <span> Daftar Kelas </span>
+                        <span> Kelola Kelas </span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{URL::to('/admin/add-student')}}">
                         <i class="la la-user-plus"></i>
-                        <span> Tabah Siswa </span>
+                        <span> Tambah Siswa </span>
                     </a>
                 </li>
 

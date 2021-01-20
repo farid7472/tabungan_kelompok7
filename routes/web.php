@@ -65,7 +65,10 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::post('/admin/add-class' , 'AdminController@SaveAddClass');
     Route::post('/admin/add-student' , 'AdminController@SaveAddStudent');
     
-    Route::get('/admin/list-students' , 'AdminController@list-students');    
+    Route::get('/admin/list-student' , 'AdminController@listStudent'); 
+    Route::get('/admin/list-teacher' , 'AdminController@listsTeacher'); 
+    Route::get('/admin/list-class' , 'AdminController@listsClass'); 
+       
     
     
 });

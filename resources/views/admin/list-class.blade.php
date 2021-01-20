@@ -1,7 +1,7 @@
 @extends('layouts.admin-master')
 
 @section('judul')
-    Data Kelas
+    List Kelas
 @endsection
 
 @section('content')

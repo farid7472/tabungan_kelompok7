@@ -42,7 +42,7 @@
                                 	@csrf
                                     <div class="form-group mb-3">
                                         <label for="emailaddress">Email address</label>
-                                        <input class="form-control  @error('usr_email') is-invalid @enderror" name="usr_email" value="{{ old('usr_email') }}" autocomplete="off" autofocus>
+                                        <input type="text" class="form-control  @error('usr_email') is-invalid @enderror" name="usr_email" value="{{ old('usr_email') }}" autocomplete="off" autofocus>
 
                                     @error('usr_email')
                                     <span class="invalid-feedback" role="alert">
@@ -54,7 +54,7 @@
 
                                     <div class="form-group mb-3">
                                         <label for="password">Password</label>
-                                        <input class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password">
+                                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password">
 
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -71,7 +71,7 @@
                                     </div>
 
                                     <div class="form-group mb-0 text-center">
-                                        <button class="btn btn-danger btn-block" type="submit"> Log In </button>
+                                        <button class="btn btn-danger btn-block"  type="submit"> Log In </button>
                                     </div>
 
                                 </form>

@@ -18,15 +18,21 @@ class AdminController extends Controller
 		return view ('admin.profile');
 	}
 
-	public function listStudents()
+	public function listStudent()
 	{
 		return view ('admin.list-students');
 	}
 
-	public function listClass()
+	public function listsClass()
 	{
 		return view ('admin.list-class');
 	}
+
+	public function listsTeacher()
+	{
+		return view ('admin.list-teacher');
+	}
+	
 
 	public function addClass()
 	{
