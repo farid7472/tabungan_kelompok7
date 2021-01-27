@@ -37,6 +37,8 @@ class UserSeeder extends Seeder
             'usr_is_active' => true,
         ]);
 
+        $siswa->assignRole('student');
+
         // $walikelas->assignRole('walikelas');
 
          
